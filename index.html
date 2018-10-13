@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Draw Box</title>
+    <!-- Bootstrap stylesheet -->
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <!-- font Awesome link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+</head>
+<body>
+    <section class="header-fixed">
+        <div class="db-top-bar">
+            <div class="row">
+                <div class="col-sm-4 db-tb-left col-xs-12">
+                    <div class="back-blk">
+                        <span class="caps blue-txt"><i class="fa fa-chevron-left"></i>Draw for mu s18</span>
+                    </div>
+                </div>
+                <div class="col-sm-8 db-tb-right col-xs-12">
+                    <div class="db-search">
+                        <select class="form-control">
+                            <option>Search</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                    <div class="db-up-dw-arrow">
+                        <span class="db-up-arrow"><i class="fa fa-chevron-up"></i></span>
+                        <span class="db-down-arrow"><i class="fa fa-chevron-down"></i></span>
+                    </div>
+                    <!-- <div class="db-match">
+                        <p class="blue-txt">Matches Found</p>
+                    </div> -->
+                     <!-- <div class="db-right-first">
+                        <span class="db-download"><i class="fa fa-download"></i></span>
+                        <span class="db-trash"><i class="fa fa-trash"></i></span>
+                    </div> -->
+                    <div class="db-right-center">
+                        <form class="form-inline">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><span class="db-left-arrow"><i class="fa fa-caret-left"></i></span></div>
+                                     <!-- <input type="text" class="form-control mus" id="exampleInputAmount" placeholder="Amount"> -->
+                                    <select class="form-control mus" id="exampleInputAmount">
+                                        <option>Amount</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                    <div class="input-group-addon"><span class="db-right-arrow"><i class="fa fa-caret-right"></i></span></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- <div class="db-right-end">
+                        <span class="db-reply"><i class="fa fa-reply"></i></span>
+                        <span class="db-more"><i class="fa fa-ellipsis-v"></i></span>
+                    </div>  -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="draw-box">
+        <div class="container-fluid">
+            <div class="btn-group db-btn-group" role="group" aria-label="...">
+                <button type="button" class="btn btn-default first-btn">R-8</button>
+                <button type="button" class="btn btn-default">QF</button>
+                <button type="button" class="btn btn-default">F</button>
+                <button type="button" class="btn btn-default last-btn"><i class="fa fa-trophy"></i></button>
+            </div>
+            <div class="right-inc-mobile">
+                <span class="db-plus"><i class="fa fa-plus"></i></span>
+                <span class="db-minus"><i class="fa fa-minus"></i></span>
+            </div>
+            <div class="db-img-container">
+                <div class="mk-wid">
+                    <div class="zoom-plus">
+                        <button type="button" class="btn btn-default plus-btn" onclick="plus_func()"><i class="fa fa-plus"></i></button>
+                    </div>
+                     <br>
+                     <div class="zoom-minus">
+                      <button type="button" class="btn btn-default plus-btn" onclick= "minus_func()"><i class="fa fa-minus"></i></button>
+                    </div>
+                    <div class="right-inc not-mobile">
+                        <!-- <span class="db-plus"><i class="fa fa-plus"></i></span> -->
+                        <!-- <span class="db-minus"><i class="fa fa-minus"></i></span> -->
+                    </div>
+                <div id="draw_box">
+                    <ul class="db-img-part-1">
+                        <li class="db-img-list part-one-1">
+                            <span class="left-line num-count">1</span>
+                            <div class="db-img-inner-blk blue-bd">
+                                <img src="img/avatar.png">
+                                <span class="db-name-1">First Lastname</span>
+                            </div>
+                            <span class="right-line"></span>
+                            <div class="extra-label">
+                                <span class="el-text">MU S18 1</span>
+                            </div>
+                            <span class="connecting-line"></span>
+                        </li>
+                        <li class="db-img-list part-one-2">
+                            <span class="left-line num-count">2</span>
+                            <div class="db-img-inner-blk lite-blue-bd">
+                                <img src="img/avatar.png">
+                                <span class="db-name-1">First Lastname one</span>
+                            </div>
+                            <span class="right-line"></span>
+                        </li>
+                        <li class="db-img-list part-one-3">
+                            <span class="left-line num-count">3</span>
+                            <div class="db-img-inner-blk blue-bg">
+                                <img src="img/avatar.png">
+                                <span class="db-name-1">First Lastname one dot</span>
+                            </div>
+                            <span class="right-line"></span>
+                            <div class="extra-label">
+                                <span class="el-text">MU S18 1</span>
+                            </div>
+                            <span class="connecting-line"></span>
+                        </li>
+                        <li class="db-img-list part-one-4">
+                            <span class="left-line num-count">4</span>
+                            <div class="db-img-inner-blk green-bd">
+                                <img src="img/avatar.png">
+                                <span class="db-name-1">First Lastname Two</span>
+                            </div>
+                            <span class="right-line"></span>
+                        </li>
+                        <li class="db-img-list part-one-5">
+                            <span class="left-line num-count">5</span>
+                            <div class="db-img-inner-blk green-bd">
+                                <img src="img/avatar.png">
+                                <span class="db-name-1">First Lastname two one</span>
+                            </div>
+                            <span class="right-line"></span>
+                            <div class="extra-label">
+                                <span class="el-text">MU S18 1</span>
+                            </div>
+                            <span class="connecting-line"></span>
+                        </li>
+                        <li class="db-img-list part-one-6">
+                            <span class="left-line num-count">6</span>
+                            <div class="db-img-inner-blk lite-green-bd">
+                                <img src="img/avatar.png">
+                                <span class="db-name-1">First Lastname two one</span>
+                            </div>
+                            <span class="right-line"></span>
+                        </li>
+                        <li class="db-img-list part-one-7">
+                            <span class="left-line num-count">7</span>
+                            <div class="db-img-inner-blk lite-yellow-bd">
+                                <img src="img/avatar.png">
+                                <span class="db-name-1">First one Lastname two one</span>
+                            </div>
+                            <span class="right-line"></span>
+                            <div class="extra-label">
+                                <span class="el-text">MU S18 1</span>
+                            </div>
+                            <span class="connecting-line"></span>
+                        </li>
+                        <li class="db-img-list part-one-8">
+                            <span class="left-line num-count">8</span>
+                            <div class="db-img-inner-blk brown-bd">
+                                <img src="img/avatar.png">
+                                <span class="db-name-1">First one Two Lastname two one</span>
+                            </div>
+                            <span class="right-line"></span>
+                        </li>
+                    </ul>
+                    <ul class="db-img-part-2">
+                        <li class="db-img-list part-two-1">
+                            <span class="left-line num-count"></span>
+                            <div class="db-img-inner-blk skyblue-bd">
+                                <img src="img/avatar.png">
+                                <span class="db-name-1">First Lastname One</span>
+                            </div>
+                            <span class="right-line"></span>
+                            <div class="number-label">
+                                <span class="nl-text">[6,1][4,6][6,5]</span>
+                            </div>
+                            <div class="extra-label">
+                                <span class="el-text">MU S18 1</span>
+                            </div>
+                            <span class="connecting-line"></span>
+                        </li>
+                        <li class="db-img-list part-two-2">
+                            <span class="left-line num-count"></span>
+                            <div class="db-img-inner-blk blue-bg">
+                                <img src="img/avatar.png">
+                                <span class="db-name-1">First Lastname one dot</span>
+                            </div>
+                            <span class="right-line"></span>
+                            <div class="number-label">
+                                <span class="nl-text">[6,1][4,6][6,5]</span>
+                            </div>
+                        </li>
+                        <li class="db-img-list part-two-3">
+                            <span class="left-line num-count"></span>
+                            <div class="db-img-inner-blk green-bd">
+                                <img src="img/avatar.png">
+                                <span class="db-name-1">First Lastname two one</span>
+                            </div>
+                            <span class="right-line"></span>
+                            <div class="number-label">
+                                <span class="nl-text">[6,1][4,6][6,5]</span>
+                            </div>
+                            <div class="extra-label">
+                                <span class="el-text">MU S18 1</span>
+                            </div>
+                            <span class="connecting-line"></span>
+                        </li>
+                        <li class="db-img-list part-two-4">
+                            <span class="left-line num-count"></span>
+                            <div class="db-img-inner-blk brown-bd">
+                                <img src="img/avatar.png">
+                                <span class="db-name-1">First one Two Lastname two one</span>
+                            </div>
+                            <span class="right-line"></span>
+                            <div class="number-label">
+                                <span class="nl-text">[6,1][4,6][6,5]</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="db-img-part-3">
+                        <li class="db-img-list part-three-1">
+                            <span class="left-line num-count"></span>
+                            <div class="db-img-inner-blk blue-bg">
+                                <img src="img/avatar.png">
+                                <span class="db-name-1">First Lastname one dot</span>
+                            </div>
+                            <span class="right-line"></span>
+                            <div class="number-label">
+                                <span class="nl-text">[6,1][4,6][6,5]</span>
+                            </div>
+                            <div class="extra-label">
+                                <span class="el-text">MU S18 1</span>
+                            </div>
+                            <span class="connecting-line"></span>
+                        </li>
+                        <li class="db-img-list part-three-2">
+                            <span class="left-line num-count"></span>
+                            <div class="db-img-inner-blk brown-bd">
+                                <img src="img/avatar.png">
+                                <span class="db-name-1">First one Two Lastname two one</span>
+                            </div>
+                            <span class="right-line"></span>
+                            <div class="number-label">
+                                <span class="nl-text">[6,1][4,6][6,5]</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="db-img-part-4">
+                        <li class="db-img-list part-four-1">
+                            <span class="left-line num-count"></span>
+                            <div class="db-img-inner-blk blue-bg">
+                                <img src="img/avatar.png">
+                                <span class="db-name-1">First Lastname one dot</span>
+                            </div>
+                            <div class="number-label">
+                                <span class="nl-text">[6,1][4,6][6,5]</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+<script type="text/javascript">
+    var x = document.getElementById('draw_box');
+    var i = 1.0;
+    var j = 1.0;
+    function minus_func() {
+        if (j >1.25){
+            j -= 0.05;
+            x.style.transform = "scale(" + i + "," + j + ")";
+        }
+        else if(i>0.2 && j > 0.2) {
+            i -= 0.05;
+            j -= 0.05;
+            x.style.transform = "scale(" + i + "," + j + ")";
+        }
+}
+
+    function plus_func() {
+        if (i < 1.25){
+            i += 0.10;
+            j+= 0.05;
+            x.style.transform = "scale(" + i + ","+j+")";
+        }
+        else{
+             j += 0.05;
+            x.style.transform = "scale(" + i + "," + j + ")";
+        }
+    }
+//     function plus_func(){
+//         i+=0.05;
+//         if(i<2)
+//         x.style.zoom= i ;
+// }
+</script>
+
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/bootstrap.js" type="text/javascript"></script>
+    <script>
+        $(window).scroll(function () {
+            if ($(window).scrollTop() >= 5) {
+                $('.header-fixed').addClass('fixed-header');
+            }
+            else {
+                $('.header-fixed').removeClass('fixed-header');
+            }
+        });
+    </script>
+</body>
+</html>
